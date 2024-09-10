@@ -28,26 +28,32 @@ this file.
 """
 
 def test_is_even():
-  """
-  Tests for the `is_even` function
-  """
+  assert math_it_up.is_even(2)
+  assert math_it_up.is_even(0)
+  assert not math_it_up.is_even(1)
+  assert not math_it_up.is_even(-1)
+  assert math_it_up.is_even(-2)
+  assert math_it_up.is_even(99999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999998)
 
 def test_is_odd():
-  """
-  Tests for the `is_odd` function
-  """
+  assert not math_it_up.is_odd(2)
+  assert not math_it_up.is_odd(0)
+  assert math_it_up.is_odd(1)
+  assert math_it_up.is_odd(-1)
+  assert not math_it_up.is_odd(-2)
+  assert math_it_up.is_odd(999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999)
 
 def test_mean():
-  """
-  Tests for the `mean` function
-  """
+  assert math_it_up.mean([i for i in range(1, 101)]) == 50.5
+  assert math_it_up.mean([i for i in range(-2, 3)]) == 0
+  assert math_it_up.mean([69 for i in range(69)]) == 69
 
 def test_median():
-  """
-  Tests for the `median` function
-  """
+  assert math_it_up.median([i for i in range(1, 100)]) == 50
+  assert math_it_up.median([i for i in range(1, 101)]) == 50.5
+  assert math_it_up.mean([69 for i in range(69)]) == 69
 
 def test_mode():
-  """
-  Tests for the `mode` function
-  """
+  assert math_it_up.mode([69 for i in range(69)].append(0)) == 69
+  assert math_it_up.mode([i for i in range(1, 101)]) == [i for i in range(1, 101)]
+  assert math_it_up.mode([i for i in range(-100, 1000)].append(0)) == 0
