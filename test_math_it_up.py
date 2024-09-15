@@ -54,6 +54,6 @@ def test_median():
   assert math_it_up.mean([69 for i in range(69)]) == 69
 
 def test_mode():
-  assert math_it_up.mode([69 for i in range(69)].append(0)) == 69
+  assert math_it_up.mode([69 for i in range(69)].append(0)) == [69]
   assert math_it_up.mode([i for i in range(1, 101)]) == [i for i in range(1, 101)]
-  assert math_it_up.mode([i for i in range(-100, 1000)].append(0)) == 0
+  assert math_it_up.mode([i for i in range(-100, 1000)].append(0)) == [0]
